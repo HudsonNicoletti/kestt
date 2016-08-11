@@ -3532,11 +3532,24 @@ section {
           justify-content: center;
           flex-direction: column; }
           section.about .container .items .item h1 {
+            display: none;
             color: #656565;
             font-family: "Royal Delight";
             font-size: 26px;
             text-transform: uppercase;
-            padding: 20px 20px; }
+            padding: 20px 20px;
+            transition: all 0.5s linear;
+            position: relative;
+            animation: rotateOut .3s linear;
+            animation-delay: .9s; }
+            section.about .container .items .item h1.active {
+              display: inline-block;
+              animation: rotateIn .3s linear; }
+            section.about .container .items .item h1:before {
+              content: '';
+              display: block;
+              width: 100%;
+              position: absolute; }
           section.about .container .items .item .brain {
             background-image: url("../images/brain.png");
             background-repeat: no-repeat;

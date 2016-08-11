@@ -151,12 +151,27 @@ section
           flex-direction: column
 
           h1
+            display: none
             color: $grey
             font:
               family: "Royal Delight"
               size: 26px
             text-transform: uppercase
             padding: 20px 20px
+            transition: all 0.5s linear
+            position: relative
+            animation: rotateOut .3s linear
+            animation-delay: .9s
+
+            &.active
+              display: inline-block
+              animation: rotateIn .3s linear
+
+            &:before
+              content: ''
+              display: block
+              width: 100%
+              position: absolute
 
           .brain
             background:
