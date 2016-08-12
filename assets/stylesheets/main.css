@@ -1,4 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@keyframes changeText {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes grow {
+  0% {
+    animation-timing-function: ease-in;
+    height: 0px; }
+  100% {
+    height: 100%; } }
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -3530,26 +3548,31 @@ section {
           display: flex;
           align-items: center;
           justify-content: center;
-          flex-direction: column; }
+          flex-direction: column;
+          position: relative;
+          margin-bottom: 100px; }
           section.about .container .items .item h1 {
-            display: none;
+            display: inline-block;
             color: #656565;
             font-family: "Royal Delight";
             font-size: 26px;
             text-transform: uppercase;
             padding: 20px 20px;
-            transition: all 0.5s linear;
-            position: relative;
-            animation: rotateOut .3s linear;
-            animation-delay: .9s; }
-            section.about .container .items .item h1.active {
-              display: inline-block;
-              animation: rotateIn .3s linear; }
-            section.about .container .items .item h1:before {
-              content: '';
-              display: block;
-              width: 100%;
-              position: absolute; }
+            position: absolute;
+            bottom: -100px;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .5s linear;
+            animation-name: changeText;
+            animation-duration: 9s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite; }
+            section.about .container .items .item h1:nth-of-type(1) {
+              animation-delay: 0s; }
+            section.about .container .items .item h1:nth-of-type(2) {
+              animation-delay: 3s; }
+            section.about .container .items .item h1:nth-of-type(3) {
+              animation-delay: 6s; }
           section.about .container .items .item .brain {
             background-image: url("../images/brain.png");
             background-repeat: no-repeat;
@@ -3599,7 +3622,15 @@ section {
               top: -40px;
               right: -40px;
               width: 100px;
-              height: 72px; }
+              height: 72px;
+              opacity: 0; }
+              section.about .container .items .item .brain.brain-2 .brain.animate {
+                animation-name: bounceIn;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; }
+              section.about .container .items .item .brain.brain-2 .brain:nth-of-type(1) {
+                animation-delay: .3s; }
             section.about .container .items .item .brain.brain-3 .particles {
               background-image: url("../images/particlesConected.png"); }
             section.about .container .items .item .brain.brain-3 .arrow {
@@ -3634,22 +3665,33 @@ section {
               top: -40px;
               right: -40px;
               width: 100px;
-              height: 72px; }
+              height: 72px;
+              opacity: 0; }
+              section.about .container .items .item .brain.brain-3 .brain.animate {
+                animation-name: bounceIn;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; }
               section.about .container .items .item .brain.brain-3 .brain:nth-of-type(6) {
                 top: -60px;
-                left: 15px; }
+                left: 15px;
+                animation-delay: .3s; }
               section.about .container .items .item .brain.brain-3 .brain:nth-of-type(7) {
                 top: -60px;
-                left: 100px; }
+                left: 100px;
+                animation-delay: .6s; }
               section.about .container .items .item .brain.brain-3 .brain:nth-of-type(8) {
                 top: -27px;
-                left: 175px; }
+                left: 175px;
+                animation-delay: .9s; }
               section.about .container .items .item .brain.brain-3 .brain:nth-of-type(9) {
                 top: 40px;
-                left: 212px; }
+                left: 212px;
+                animation-delay: 1.2s; }
               section.about .container .items .item .brain.brain-3 .brain:nth-of-type(10) {
                 top: 113px;
-                left: 169px; }
+                left: 169px;
+                animation-delay: 1.5s; }
           section.about .container .items .item .piggy {
             background-image: url("../images/piggy.png");
             background-repeat: no-repeat;
@@ -3660,14 +3702,21 @@ section {
             section.about .container .items .item .piggy .bar {
               display: block;
               width: 20px;
-              height: 250px;
+              height: 0px;
               background-color: #ff9000;
               position: absolute;
               top: 50%;
               left: 50%; }
+              section.about .container .items .item .piggy .bar.animate {
+                animation-name: grow;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; }
               section.about .container .items .item .piggy .bar:nth-of-type(1) {
+                animation-delay: .3s;
                 transform: translate(-50%, -50%) rotate(45deg); }
               section.about .container .items .item .piggy .bar:nth-of-type(2) {
+                animation-delay: .3s;
                 transform: translate(-50%, -50%) rotate(-45deg); }
   section.info {
     background-color: #ffffff;
@@ -3679,7 +3728,7 @@ section {
       flex-direction: row;
       position: relative; }
       section.info .container .view .title {
-        width: 100%;
+        width: 50%;
         height: 185px;
         display: flex;
         align-items: center;
@@ -3693,10 +3742,24 @@ section {
           font-size: 30px;
           text-transform: uppercase;
           text-decoration: none;
-          margin-left: 175px; }
+          margin-left: 175px;
+          max-width: 220px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column; }
+          section.info .container .view .title h1 span {
+            display: inline-block; }
+      section.info .container .view .text {
+        width: 50%;
+        padding: 15px;
+        font-family: Lato;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #656565; }
     section.info .container ul.about {
       width: 100%;
-      padding: 0;
+      padding: 25px 0;
       margin: 0;
       list-style: none;
       display: flex;
@@ -3706,21 +3769,36 @@ section {
       position: relative; }
       section.info .container ul.about li {
         width: 100%;
-        height: 165px;
+        height: 110px;
         background-image: url("../images/yellowPencil.png");
         background-repeat: no-repeat;
         background-size: contain;
-        padding: 25px;
-        box-sizing: border-box; }
-        section.info .container ul.about li a {
-          position: relative;
-          color: #656565;
-          font-family: "Royal Delight";
-          font-size: 22px;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 20px 20px; }
-        section.info .container ul.about li span {
-          display: none; }
+        margin: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
         section.info .container ul.about li.active {
           display: none; }
+        section.info .container ul.about li .lang {
+          display: none;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column; }
+          section.info .container ul.about li .lang.active {
+            display: flex; }
+          section.info .container ul.about li .lang a {
+            position: relative;
+            color: #656565;
+            font-family: "Royal Delight";
+            font-size: 22px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column; }
+            section.info .container ul.about li .lang a span {
+              display: inline-block; }
+          section.info .container ul.about li .lang span {
+            display: none; }
