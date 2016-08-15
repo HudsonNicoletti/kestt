@@ -1,5 +1,6 @@
-declare const jQuery
-(($)=>{
+/// <reference path="jquery.d.ts" />
+
+(()=>{
 
   const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
@@ -12,10 +13,18 @@ declare const jQuery
       })
     })
 
-    $("a.trigger").on("click",()=>{
+    $("a.trigger").on("click",function(){
+      $(this).toggleClass("active")
+      $("nav ul").toggleClass("active")
+    })
+
+    $("section.info ul.about li").on("click",function(){
+      $(this).siblings(".active").removeClass("active")
       $(this).addClass("active")
+      
+      return false
     })
 
   })
 
-})(jQuery)
+})()

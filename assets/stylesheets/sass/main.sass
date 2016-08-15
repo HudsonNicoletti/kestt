@@ -133,7 +133,7 @@ header
       position: relative
 
       li
-        padding: 55px 20px
+        transition: all .3s ease-in-out
 
         a
           color: $grey
@@ -142,15 +142,20 @@ header
             size: 18px
           text-transform: uppercase
           text-decoration: none
+          padding: 55px 20px
+          width: 135px
+          display: block
+          text-align: center
+          &:hover
+            text-decoration: none
 
-        &.active
-          background:
-            color: $orange
-          border-radius: 50%
-          animation: zoomIn .5s linear
-
+        &.active, &:hover
           a
             color: $white
+            background:
+              color: $orange
+            border-radius: 50%
+            animation: zoomIn .5s linear
 
 section
   width: 100%
@@ -211,11 +216,11 @@ section
             bottom: -100px
             opacity: 0
             overflow: hidden
-            transition: all .5s linear
+            transition: all .3s linear
             // duration = sum of delays
             animation:
               name: changeText
-              duration: 9s
+              duration: 12s
               timing-function: ease-in-out
               iteration-count: infinite
 
@@ -223,10 +228,10 @@ section
 	            animation-delay: 0s
 
             &:nth-of-type(2)
-	            animation-delay: 3s
+	            animation-delay: 4s
 
             &:nth-of-type(3)
-	            animation-delay: 6s
+	            animation-delay: 8s
 
           .brain
             background:
@@ -427,7 +432,7 @@ section
         position: relative
 
         .title
-          width: 50%
+          width: 100%
           height: 185px
           display: flex
           align-items: center
@@ -440,7 +445,7 @@ section
             color: $white
             font:
               family: "Royal Delight"
-              size: 30px
+              size: responsive 22px 30px
             text-transform: uppercase
             text-decoration: none
             margin-left: 175px
@@ -453,7 +458,7 @@ section
             span
               display: inline-block
         .text
-          width: 50%
+          width: 100%
           padding: 15px
           font:
             family: Lato
@@ -480,23 +485,38 @@ section
             image: url('../images/yellowPencil.png')
             repeat: no-repeat
             size: contain
-          margin: 0 10px
+            position: center center
+          margin: 10px
           box-sizing: border-box
           display: flex
           align-items: center
           justify-content: center
+          position: relative
 
           &.active
             display: none
 
           .lang
-            display: none
+            display: flex
             align-items: center
             justify-content: center
             flex-direction: column
+            opacity: 0
+            position: absolute
+            animation:
+              name: changeText
+              duration: 20s
+              timing-function: ease-in-out
+              iteration-count: infinite
 
-            &.active
-              display: flex
+            &:nth-of-type(1)
+	            animation-delay: 0s
+
+            &:nth-of-type(2)
+	            animation-delay: 8s
+
+            &:nth-of-type(3)
+	            animation-delay: 12s
 
             a
               position: relative
@@ -516,5 +536,78 @@ section
 
             span
               display: none
+
+  &.stats
+    position: relative
+    height: 500px
+    background: $yellow
+
+    &:before, &:after
+      content: ''
+      background: repeating-linear-gradient(-45deg, $grey, $grey 10px, $white 10px, $white 20px)
+      height: 10px
+      width: 100%
+      position: absolute
+
+    &:before
+      top: -10px
+      left: 0
+    &:after
+      bottom: -10px
+      left: 0
+
+    .container
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: row
+
+      .column
+        width: 100%
+        padding: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        position: relative
+
+        h1
+          color: $grey
+          font:
+            family: "Royal Delight"
+            size: 28px
+          text-transform: uppercase
+          width: 50%
+        span
+          color: $grey
+          font:
+            family: "Royal Delight"
+            size: 40px
+          text-transform: uppercase
+          width: 50%
+
+        &:before
+          content: ''
+          position: absolute
+          width: calc(50% - 130px)
+          height: calc(50% - 130px)
+          background:
+            repeat: no-repeat
+            size: contain
+            position: center center
+          top: 0
+          left: 0
+
+        &:nth-child(1)
+          &:before
+            background:
+              image: url("../images/person.png")
+
+        &:nth-child(2)
+          &:before
+            background:
+              image: url("../images/link.png")
+
 
 @import 'responsive'

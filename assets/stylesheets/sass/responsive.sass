@@ -7,13 +7,21 @@
     .logo
       width: 100%
 
-  section.about
-    .container
-      .items
-        flex-wrap: wrap
-        .item
-          width: 50% !important
-          padding: 25px 0
+  section
+    &.about
+      .container
+        .items
+          flex-wrap: wrap
+          .item
+            width: 50% !important
+            padding: 25px 0
+
+    &.info
+      .container
+        .view
+          flex-direction: column
+        ul.about
+          flex-direction: column !important
 
 @media (max-width: 690px)
   header
@@ -40,13 +48,21 @@
 
           li
             width: 100%
-            padding: 20px
+            text-align: center
+            a
+              padding: 20px
 
-            &.active
-              border-radius: 0
+            &.active, &:hover
+              a
+                border-radius: 0
+                width: 100%
 
   section.about
     .container
       .items
         .item
           width: 100% !important
+
+  section.stats
+    .container
+      flex-direction: column
