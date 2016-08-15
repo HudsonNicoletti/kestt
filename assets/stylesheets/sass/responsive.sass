@@ -1,6 +1,12 @@
 
-// about
 @media (max-width: 1200px)
+  header
+    height: auto !important
+    flex-direction: column !important
+
+    .logo
+      width: 100%
+
   section.about
     .container
       .items
@@ -10,8 +16,37 @@
           padding: 25px 0
 
 @media (max-width: 690px)
-    section.about
-      .container
-        .items
-          .item
-            width: 100% !important
+  header
+    nav
+      a.trigger
+        display: flex !important
+      a.login
+        display: none !important
+      ul
+        transition: all .3s linear
+        display: none
+        position: absolute
+        top: -100vh !important
+        left: 0
+
+        &.active
+          width: 100vw
+          height: 100vh
+          background: $white
+          display: flex
+          flex-direction: column
+          top: 0 !important
+          z-index: 5
+
+          li
+            width: 100%
+            padding: 20px
+
+            &.active
+              border-radius: 0
+
+  section.about
+    .container
+      .items
+        .item
+          width: 100% !important

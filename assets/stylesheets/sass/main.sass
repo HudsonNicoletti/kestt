@@ -9,7 +9,6 @@ $white: #ffffff
 @import 'animate'
 @import 'fonts'
 @import 'bootstrap'
-@import 'responsive'
 
 body
   margin: 0 auto
@@ -17,7 +16,7 @@ body
 
 header
   width: 100%
-  height: 250px
+  height: auto
   background:
     color: $white
   display: flex
@@ -26,11 +25,14 @@ header
   flex-direction: row
 
   .logo
-    height: 222px
+    height: auto
+    min-height: 180px
     width: 544px
-    img
-      width: 100%
-      height: 100%
+    background:
+      image: url('../images/logo.png')
+      repeat: no-repeat
+      size: contain
+      position: center center
 
   nav
     display: flex
@@ -38,6 +40,47 @@ header
     justify-content: center
     flex-direction: row
     margin: 0 25px
+
+    a.trigger
+      display: none
+      position: absolute
+      width: 50px
+      height: 50px
+      background-color: $orange
+      border-radius: 50%
+      top: 25px
+      right: 25px
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      z-index: 10
+
+      span
+        width: 40px
+        height: 6px
+        display: inline-block
+        border-radius: 6px
+        background-color: $white
+        margin: 3px 0
+        opacity: 1
+        transition: all 0.3s linear
+
+        &:nth-child(1), &:nth-child(3)
+          width: 30px
+
+      &.active
+        span
+          margin: -3px 0
+
+          &:nth-child(1)
+            transform: rotate(-45deg)
+            width: 40px
+
+          &:nth-child(2)
+            transform: rotate(45deg)
+
+          &:nth-child(3)
+            opacity: 0
 
     a.login
       position: relative
@@ -86,6 +129,8 @@ header
       align-items: center
       justify-content: center
       flex-direction: row
+      transition: all 0.3s linear
+      position: relative
 
       li
         padding: 55px 20px
@@ -106,6 +151,7 @@ header
 
           a
             color: $white
+
 section
   width: 100%
   height: auto
@@ -470,3 +516,5 @@ section
 
             span
               display: none
+
+@import 'responsive'

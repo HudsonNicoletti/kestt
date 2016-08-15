@@ -12,6 +12,10 @@ declare const jQuery
       })
     })
 
+    $("a.trigger").on("click",()=>{
+      $(this).addClass("active")
+    })
+
   })
 
 })(jQuery)
