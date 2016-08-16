@@ -35,7 +35,13 @@
         display: none
         position: absolute
         top: -100vh !important
+        background: $white
+        display: flex
+        flex-direction: column
+        width: 100vw !important
+        height: 100vh !important
         left: 0
+        z-index: 5
 
         &.active
           width: 100vw
@@ -51,6 +57,9 @@
             text-align: center
             a
               padding: 20px
+
+            &.mobile
+              display: inline-block
 
             &.active, &:hover
               a

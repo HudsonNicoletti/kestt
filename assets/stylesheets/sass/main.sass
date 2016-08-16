@@ -136,6 +136,9 @@ header
       li
         transition: all .3s ease-in-out
 
+        &.mobile
+          display: none
+
         a
           color: $grey
           font:
@@ -151,12 +154,6 @@ header
           border-radius: 50%
           &:hover
             text-decoration: none
-
-
-        &:hover + &.active
-          a
-            background:
-              color: $green !important
 
         &.active, &:hover
           a
