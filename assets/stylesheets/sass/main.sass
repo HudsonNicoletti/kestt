@@ -168,6 +168,20 @@ section
     position: relative
     margin-top: 60px
 
+    &:before
+      width: 100vw
+      height: 20px
+      content: ''
+      display: block
+      position: absolute
+      top: -50px
+      right: 0
+      border-top: 100px solid $yellow
+      border-radius: 100% 5% 0 0
+      background-color: $yellow
+      z-index: 3
+      transform: rotate(-2deg)
+
     &:after
       width: 100%
       height: 20px
@@ -539,7 +553,6 @@ section
 
   &.stats
     position: relative
-    height: 500px
     background: $yellow
 
     &:before, &:after
@@ -569,7 +582,7 @@ section
         display: flex
         align-items: center
         justify-content: center
-        flex-direction: column
+        flex-direction: row
         position: relative
 
         h1
@@ -579,6 +592,7 @@ section
             size: 28px
           text-transform: uppercase
           width: 50%
+          word-break:
         span
           color: $grey
           font:
@@ -587,25 +601,22 @@ section
           text-transform: uppercase
           width: 50%
 
-        &:before
-          content: ''
-          position: absolute
-          width: calc(50% - 130px)
-          height: calc(50% - 130px)
+        i.icon
+          width: 130px
+          height: 130px
+          display: block
           background:
             repeat: no-repeat
             size: contain
             position: center center
-          top: 0
-          left: 0
 
         &:nth-child(1)
-          &:before
+          i.icon
             background:
               image: url("../images/person.png")
 
         &:nth-child(2)
-          &:before
+          i.icon
             background:
               image: url("../images/link.png")
 
