@@ -3418,7 +3418,8 @@ hr {
 
 body {
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
 
 header {
   width: 100%;
@@ -3532,14 +3533,17 @@ header {
           padding: 55px 20px;
           width: 135px;
           display: block;
-          text-align: center; }
+          text-align: center;
+          transition: all .3s ease-in-out;
+          border-radius: 50%; }
           header nav ul li a:hover {
             text-decoration: none; }
+        header nav ul li:hover + header nav ul li.active a {
+          background-color: #44c200 !important; }
         header nav ul li.active a, header nav ul li:hover a {
           color: #ffffff;
           background-color: #ff9000;
-          border-radius: 50%;
-          animation: zoomIn .5s linear; }
+          animation: bounceIn .3s ease-in-out; }
 
 section {
   width: 100%;
@@ -3916,6 +3920,58 @@ section {
           background-image: url("../images/person.png"); }
         section.stats .container .column:nth-child(2) i.icon {
           background-image: url("../images/link.png"); }
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff; }
+  footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 25px;
+    box-sizing: border-box; }
+    footer .container .logo {
+      height: auto;
+      min-height: 136px;
+      width: 500px;
+      background-image: url("../images/logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center; }
+    footer .container .copyright {
+      font-family: Lato;
+      font-size: 20px;
+      color: #656565; }
+    footer .container ul.social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      list-style: none; }
+      footer .container ul.social li {
+        padding: 0 5px; }
+        footer .container ul.social li a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          text-decoration: none; }
+          footer .container ul.social li a i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px; }
+        footer .container ul.social li:nth-child(1) i {
+          background-color: #3b5998; }
+        footer .container ul.social li:nth-child(2) i {
+          background-color: #55acee; }
+        footer .container ul.social li:nth-child(3) i {
+          background-color: #3f729b; }
 
 @media (max-width: 1200px) {
   header {

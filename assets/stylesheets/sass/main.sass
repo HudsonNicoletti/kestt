@@ -13,6 +13,7 @@ $white: #ffffff
 body
   margin: 0 auto
   padding: 0
+  overflow-x: hidden
 
 header
   width: 100%
@@ -146,16 +147,23 @@ header
           width: 135px
           display: block
           text-align: center
+          transition: all .3s ease-in-out
+          border-radius: 50%
           &:hover
             text-decoration: none
+
+
+        &:hover + &.active
+          a
+            background:
+              color: $green !important
 
         &.active, &:hover
           a
             color: $white
             background:
               color: $orange
-            border-radius: 50%
-            animation: zoomIn .5s linear
+            animation: bounceIn .3s ease-in-out
 
 section
   width: 100%
@@ -619,6 +627,71 @@ section
           i.icon
             background:
               image: url("../images/link.png")
+
+footer
+  width: 100%
+  height: auto
+  background:
+    color: $white
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    padding: 25px
+    box-sizing: border-box
+
+    .logo
+      height: auto
+      min-height: 136px
+      width: 500px
+      background:
+        image: url('../images/logo.png')
+        repeat: no-repeat
+        size: contain
+        position: center center
+
+    .copyright
+      font:
+        family: Lato
+        size: 20px
+      color: $grey
+
+    ul.social
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: row
+      list-style: none
+
+      li
+        padding: 0 5px
+        a
+          display: flex
+          align-items: center
+          justify-content: center
+          color: $white
+          text-decoration: none
+
+          i
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            font-size: 20px
+
+        &:nth-child(1)
+          i
+            background-color: #3b5998
+        &:nth-child(2)
+          i
+            background-color: #55acee
+        &:nth-child(3)
+          i
+            background-color: #3f729b
 
 
 @import 'responsive'
