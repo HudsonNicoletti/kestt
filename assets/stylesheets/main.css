@@ -4065,6 +4065,125 @@ section.login {
         background-size: contain;
         background-position: center center; }
 
+section.contact {
+  margin: 30px 0;
+  box-sizing: border-box; }
+  section.contact h1 {
+    color: #656565;
+    font-family: "Royal Delight";
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center; }
+  section.contact .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row; }
+    section.contact .container .column {
+      width: 100%;
+      padding: 25px;
+      min-height: 416px; }
+      section.contact .container .column + .column {
+        border-left: solid 1px #ff9000; }
+      section.contact .container .column form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        section.contact .container .column form input, section.contact .container .column form textarea {
+          background-color: #ff9000;
+          color: #ffffff;
+          font-family: Lato;
+          font-size: 18px;
+          transition: all .3s ease-in-out;
+          box-sizing: border-box;
+          border: 2px solid #ffffff;
+          width: 100%;
+          padding: 10px 10px;
+          border-radius: 40px;
+          outline: none;
+          margin: 10px 0; }
+          section.contact .container .column form input::-webkit-input-placeholder, section.contact .container .column form textarea::-webkit-input-placeholder {
+            color: #ffffff; }
+          section.contact .container .column form input:-moz-placeholder, section.contact .container .column form textarea:-moz-placeholder {
+            color: #ffffff; }
+          section.contact .container .column form input::-moz-placeholder, section.contact .container .column form textarea::-moz-placeholder {
+            color: #ffffff; }
+          section.contact .container .column form input:-ms-input-placeholder, section.contact .container .column form textarea:-ms-input-placeholder {
+            color: #ffffff; }
+          section.contact .container .column form input:focus, section.contact .container .column form textarea:focus {
+            background-color: #ffffff;
+            color: #656565;
+            border: 2px solid #ff9000; }
+            section.contact .container .column form input:focus::-webkit-input-placeholder, section.contact .container .column form textarea:focus::-webkit-input-placeholder {
+              color: #656565; }
+            section.contact .container .column form input:focus:-moz-placeholder, section.contact .container .column form textarea:focus:-moz-placeholder {
+              color: #656565; }
+            section.contact .container .column form input:focus::-moz-placeholder, section.contact .container .column form textarea:focus::-moz-placeholder {
+              color: #656565; }
+            section.contact .container .column form input:focus:-ms-input-placeholder, section.contact .container .column form textarea:focus:-ms-input-placeholder {
+              color: #656565; }
+        section.contact .container .column form textarea {
+          resize: none;
+          height: 200px;
+          padding: 15px; }
+        section.contact .container .column form button {
+          width: 100px;
+          height: 100px;
+          background-color: #ff9000;
+          font-family: Lato;
+          font-size: 20px;
+          color: #ffffff;
+          border-radius: 100%;
+          border: 2px solid #ffffff;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          transition: all .3s linear; }
+          section.contact .container .column form button:hover {
+            background-color: #ffffff;
+            color: #ff9000;
+            border: 2px solid #ff9000; }
+      section.contact .container .column ul.contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%; }
+        section.contact .container .column ul.contact-info li {
+          padding: 10px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row; }
+          section.contact .container .column ul.contact-info li i.icon {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-right: 15px; }
+            section.contact .container .column ul.contact-info li i.icon.pin {
+              background-image: url("../images/pin.png"); }
+            section.contact .container .column ul.contact-info li i.icon.phone {
+              background-image: url("../images/phone.png"); }
+            section.contact .container .column ul.contact-info li i.icon.email {
+              background-image: url("../images/email.png"); }
+          section.contact .container .column ul.contact-info li span {
+            font-family: Lato;
+            font-size: 18px;
+            color: #656565;
+            text-transform: uppercase; }
+
 @media (max-width: 1200px) {
   header {
     height: auto !important;

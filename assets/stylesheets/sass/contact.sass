@@ -24,3 +24,122 @@ section.contact
 
       &+ .column
         border-left: solid 1px $orange
+
+      form
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        input, textarea
+          background:
+            color: $orange
+          color: $white
+          font:
+            family: Lato
+            size: 18px
+          transition: all .3s ease-in-out
+          box-sizing: border-box
+          border: 2px solid $white
+          width: 100%
+          padding: 10px 10px
+          border-radius: 40px
+          outline: none
+          margin: 10px 0
+
+          &::-webkit-input-placeholder
+            color: $white
+          &:-moz-placeholder
+            color: $white
+          &::-moz-placeholder
+            color: $white
+          &:-ms-input-placeholder
+            color: $white
+
+          &:focus
+            background:
+              color: $white
+            color: $grey
+            border: 2px solid $orange
+
+            &::-webkit-input-placeholder
+              color: $grey
+            &:-moz-placeholder
+              color: $grey
+            &::-moz-placeholder
+              color: $grey
+            &:-ms-input-placeholder
+              color: $grey
+
+        textarea
+          resize: none
+          height: 200px
+          padding: 15px
+          
+        button
+          width: 100px
+          height: 100px
+          background-color: $orange
+          font:
+            family: Lato
+            size: 20px
+          color: $white
+          border-radius: 100%
+          border: 2px solid $white
+          box-sizing: border-box
+          display: flex
+          align-items: center
+          justify-content: center
+          text-transform: uppercase
+          transition: all .3s linear
+
+          &:hover
+            background-color: $white
+            color: $orange
+            border: 2px solid $orange
+
+      ul.contact-info
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        width: 100%
+
+        li
+          padding: 10px
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: row
+
+          i.icon
+            display: inline-block
+            width: 45px
+            height: 45px
+            background:
+              repeat: no-repeat
+              size: contain
+              position: center center
+            margin-right: 15px
+
+            &.pin
+              background:
+                image: url('../images/pin.png')
+            &.phone
+              background:
+                image: url('../images/phone.png')
+            &.email
+              background:
+                image: url('../images/email.png')
+
+          span
+            font:
+              family: Lato
+              size: 18px
+            color: $grey
+            text-transform: uppercase
