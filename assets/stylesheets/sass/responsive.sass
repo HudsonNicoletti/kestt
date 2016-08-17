@@ -75,3 +75,15 @@
   section.stats
     .container
       flex-direction: column
+
+  section.login
+    .container
+      flex-direction: column
+      .column
+        &+ .column
+          border-left: none
+          border-top: solid 1px $orange
+
+  footer
+    .container
+      flex-direction: column

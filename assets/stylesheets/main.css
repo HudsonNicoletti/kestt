@@ -3476,16 +3476,7 @@ header {
           transform: rotate(45deg); }
         header nav a.trigger.active span:nth-child(3) {
           opacity: 0; }
-    header nav a.login {
-      position: relative;
-      color: #656565;
-      font-family: "Royal Delight";
-      font-size: 22px;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 20px 20px;
-      border-radius: 50%; }
-      header nav a.login:before {
+      header nav a.trigger:before {
         position: absolute;
         display: block;
         border: solid 4px #44c200;
@@ -3499,7 +3490,7 @@ header {
         border-top: transparent;
         border-right: transparent;
         transform: rotate(-10deg); }
-      header nav a.login:after {
+      header nav a.trigger:after {
         position: absolute;
         display: block;
         border-top: solid 1px #44c200;
@@ -3526,6 +3517,12 @@ header {
         transition: all .3s ease-in-out; }
         header nav ul li.mobile {
           display: none; }
+        header nav ul li.login a {
+          color: #656565;
+          font-family: "Royal Delight";
+          font-size: 18px;
+          text-transform: uppercase;
+          text-decoration: none; }
         header nav ul li a {
           color: #656565;
           font-family: Lato;
@@ -3841,18 +3838,7 @@ section {
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          opacity: 0;
-          position: absolute;
-          animation-name: changeText;
-          animation-duration: 20s;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count: infinite; }
-          section.info .container ul.about li .lang:nth-of-type(1) {
-            animation-delay: 0s; }
-          section.info .container ul.about li .lang:nth-of-type(2) {
-            animation-delay: 8s; }
-          section.info .container ul.about li .lang:nth-of-type(3) {
-            animation-delay: 12s; }
+          position: absolute; }
           section.info .container ul.about li .lang a {
             position: relative;
             color: #656565;
@@ -3949,7 +3935,8 @@ footer {
       align-items: center;
       justify-content: center;
       flex-direction: row;
-      list-style: none; }
+      list-style: none;
+      padding: 0; }
       footer .container ul.social li {
         padding: 0 5px; }
         footer .container ul.social li a {
@@ -3972,6 +3959,111 @@ footer {
           background-color: #55acee; }
         footer .container ul.social li:nth-child(3) i {
           background-color: #3f729b; }
+
+section.login {
+  margin: 30px 0;
+  box-sizing: border-box; }
+  section.login .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row; }
+    section.login .container .column {
+      width: 100%;
+      padding: 25px;
+      min-height: 416px; }
+      section.login .container .column + .column {
+        border-left: solid 1px #ff9000; }
+      section.login .container .column h1 {
+        color: #656565;
+        font-family: "Royal Delight";
+        font-size: 26px;
+        text-transform: uppercase;
+        text-decoration: none; }
+      section.login .container .column form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        section.login .container .column form input {
+          background-color: #ff9000;
+          color: #ffffff;
+          font-family: Lato;
+          font-size: 18px;
+          transition: all .3s ease-in-out;
+          box-sizing: border-box;
+          border: 2px solid #ffffff;
+          width: 100%;
+          padding: 10px 10px;
+          border-radius: 40px;
+          outline: none;
+          margin: 10px 0; }
+          section.login .container .column form input::-webkit-input-placeholder {
+            color: #ffffff; }
+          section.login .container .column form input:-moz-placeholder {
+            color: #ffffff; }
+          section.login .container .column form input::-moz-placeholder {
+            color: #ffffff; }
+          section.login .container .column form input:-ms-input-placeholder {
+            color: #ffffff; }
+          section.login .container .column form input:focus {
+            background-color: #ffffff;
+            color: #656565;
+            border: 2px solid #ff9000; }
+            section.login .container .column form input:focus::-webkit-input-placeholder {
+              color: #656565; }
+            section.login .container .column form input:focus:-moz-placeholder {
+              color: #656565; }
+            section.login .container .column form input:focus::-moz-placeholder {
+              color: #656565; }
+            section.login .container .column form input:focus:-ms-input-placeholder {
+              color: #656565; }
+        section.login .container .column form button {
+          width: 100px;
+          height: 100px;
+          background-color: #ff9000;
+          font-family: Lato;
+          font-size: 20px;
+          color: #ffffff;
+          border-radius: 100%;
+          border: 2px solid #ffffff;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          transition: all .3s linear; }
+          section.login .container .column form button:hover {
+            background-color: #ffffff;
+            color: #ff9000;
+            border: 2px solid #ff9000; }
+      section.login .container .column button {
+        background-color: #ff9000;
+        color: #ffffff;
+        font-family: Lato;
+        font-size: 18px;
+        transition: all .3s ease-in-out;
+        box-sizing: border-box;
+        border: 2px solid #ffffff;
+        width: 100%;
+        padding: 10px 10px;
+        border-radius: 40px;
+        outline: none;
+        margin: 10px 0;
+        text-transform: uppercase; }
+        section.login .container .column button:hover {
+          background-color: #ffffff;
+          color: #656565;
+          border: 2px solid #ff9000; }
+      section.login .container .column a.facebook {
+        width: 100%;
+        height: 230px;
+        display: block;
+        background-image: url("../images/facebook.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center; }
 
 @media (max-width: 1200px) {
   header {
@@ -4027,4 +4119,11 @@ footer {
   section.about .container .items .item {
     width: 100% !important; }
   section.stats .container {
+    flex-direction: column; }
+  section.login .container {
+    flex-direction: column; }
+    section.login .container .column + .column {
+      border-left: none;
+      border-top: solid 1px #ff9000; }
+  footer .container {
     flex-direction: column; } }
