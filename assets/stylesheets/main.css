@@ -3457,7 +3457,7 @@ header {
     margin: 0 25px; }
     header nav a.trigger {
       display: none;
-      position: absolute;
+      position: fixed;
       width: 50px;
       height: 50px;
       background-color: #ff9000;
@@ -3488,33 +3488,6 @@ header {
           transform: rotate(45deg); }
         header nav a.trigger.active span:nth-child(3) {
           opacity: 0; }
-      header nav a.trigger:before {
-        position: absolute;
-        display: block;
-        border: solid 4px #44c200;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        box-sizing: border-box;
-        border-top: transparent;
-        border-right: transparent;
-        transform: rotate(-10deg); }
-      header nav a.trigger:after {
-        position: absolute;
-        display: block;
-        border-top: solid 1px #44c200;
-        border-right: 3px solid #44c200;
-        content: '';
-        top: 2px;
-        left: 10px;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        box-sizing: border-box;
-        transform: rotate(-25deg); }
     header nav ul {
       list-style: none;
       padding: 0;
@@ -4236,6 +4209,59 @@ section.about-us {
       text-align: justify;
       color: #656565; }
 
+section.introduction .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+  section.introduction .container .column {
+    width: 100%;
+    position: relative; }
+    section.introduction .container .column:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      section.introduction .container .column:nth-child(1) h1 {
+        font-family: "Royal Delight";
+        font-size: 40px;
+        color: #656565;
+        line-height: 56px;
+        text-transform: uppercase;
+        order: 2; }
+      section.introduction .container .column:nth-child(1) span.arrow {
+        display: block;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat; }
+        section.introduction .container .column:nth-child(1) span.arrow:nth-of-type(1) {
+          top: 0;
+          background-image: url("../images/boldArrow.png");
+          background-position: left center;
+          width: 100%;
+          height: 160px;
+          order: 1; }
+        section.introduction .container .column:nth-child(1) span.arrow:nth-of-type(2) {
+          background-image: url("../images/dubbleArrow.png");
+          width: 100%;
+          height: 88px;
+          transform: rotate(-100deg);
+          order: 3; }
+    section.introduction .container .column .embed {
+      border: 8px solid #ffcc00;
+      border-radius: 10px;
+      position: relative;
+      height: 0;
+      padding-top: 25px;
+      padding-bottom: 56.25%; }
+      section.introduction .container .column .embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; }
+
 @media (max-width: 1200px) {
   header {
     height: auto !important;
@@ -4250,7 +4276,9 @@ section.about-us {
   section.info .container .view {
     flex-direction: column; }
   section.info .container ul.about {
-    flex-direction: column !important; } }
+    flex-direction: column !important; }
+  section.introduction .container .column:nth-child(1) .arrow:nth-of-type(2) {
+    display: none; } }
 
 @media (max-width: 690px) {
   header nav a.trigger {
@@ -4301,5 +4329,7 @@ section.about-us {
     section.contact .container .column + .column {
       border-left: none;
       border-top: solid 1px #ff9000; }
+  section.introduction .container {
+    flex-direction: column; }
   footer .container {
     flex-direction: column; } }

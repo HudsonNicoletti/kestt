@@ -2,7 +2,7 @@ section.about-us
   background-color: $yellow
   position: relative
   margin-top: 60px
-  
+
   &:before
     width: 100vw
     height: 20px
@@ -45,3 +45,67 @@ section.about-us
           size: 30px
         text-align: justify
         color: $grey
+
+section.introduction
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+
+    .column
+      width: 100%
+      position: relative
+
+      &:nth-child(1)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        h1
+          font:
+            family: "Royal Delight"
+            size: 40px
+          color: $grey
+          line-height: 56px
+          text-transform: uppercase
+          order: 2
+
+        span.arrow
+          display: block
+          background:
+            size: contain
+            position: center center
+            repeat: no-repeat
+          &:nth-of-type(1)
+            top: 0
+            background:
+              image: url("../images/boldArrow.png")
+              position: left center
+            width: 100%
+            height: 160px
+            order: 1
+          &:nth-of-type(2)
+            background:
+              image: url('../images/dubbleArrow.png')
+            width: 100%
+            height: 88px
+            transform: rotate(-100deg)
+            order: 3
+
+      .embed
+        border: 8px solid $yellow
+        border-radius: 10px
+        position: relative
+        height: 0
+        padding:
+          top: 25px
+          bottom: 56.25%
+
+        iframe
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          width: 100%
+          height: 100%
