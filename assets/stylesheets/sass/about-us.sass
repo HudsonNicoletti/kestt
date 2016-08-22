@@ -123,6 +123,244 @@ section.explanation
       align-items: center
       justify-content: center
       flex-direction: row
-      border-radius: 10px
-      border: 2px solid $orange
       padding: 25px
+      position: relative
+
+      &.reverse
+        .illustration
+          order: 2
+        .text
+          order: 1
+
+      .illustration
+        width: 50%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        position: relative
+        margin: 70px 0
+
+        h1
+          display: inline-block
+          color: $grey
+          font:
+            family: "Royal Delight"
+            size: 26px
+          text-transform: uppercase
+          padding: 20px 20px
+          position: absolute
+          bottom: -100px
+          opacity: 0
+          overflow: hidden
+          transition: all .3s linear
+          // duration = sum of delays
+          animation:
+            name: changeText
+            duration: 12s
+            timing-function: ease-in-out
+            iteration-count: infinite
+
+          &:nth-of-type(1)
+            animation-delay: 0s
+
+          &:nth-of-type(2)
+            animation-delay: 4s
+
+          &:nth-of-type(3)
+            animation-delay: 8s
+
+        .brain
+          background:
+            image: url('../images/brain.png')
+            repeat: no-repeat
+            size: contain
+          width: 222px
+          height: 194px
+          position: relative
+
+          .particles
+            background:
+              image: url('../images/particles.png')
+              repeat: no-repeat
+              size: contain
+            width: 128px
+            height: 105px
+            position: absolute
+            top: 30px
+            left: 40px
+
+          &.brain-1
+            .arrow
+              background:
+                image: url('../images/arrow.png')
+                repeat: no-repeat
+                size: contain
+              width: 100px
+              height: 50px
+              position: absolute
+
+              &:nth-of-type(1)
+                bottom: 20px
+                left: -20px
+                transform: rotate(180deg)
+              &:nth-of-type(2)
+                top: 0
+                left: 10px
+                transform: rotate(270deg)
+              &:nth-of-type(3)
+                top: 0
+                right: -20px
+
+          &.brain-2
+            .arrow
+              background:
+                image: url('../images/dubbleArrow.png')
+                repeat: no-repeat
+                size: contain
+              width: 100px
+              height: 88px
+              position: absolute
+
+              &:nth-of-type(1)
+                top: -50px
+                left: 60px
+
+            .brain
+              position: absolute
+              top: -40px
+              right: -40px
+              width: 100px
+              height: 72px
+              opacity: 0
+
+              &.animate
+                animation:
+                  name: bounceIn
+                  duration: .3s
+                  iteration-count: 1
+                  fill-mode: forwards
+
+              &:nth-of-type(1)
+                animation-delay: .3s
+
+          &.brain-3
+            .particles
+              background:
+                image: url('../images/particlesConected.png')
+            .arrow
+              background:
+                image: url('../images/arrowThin.png')
+                repeat: no-repeat
+                size: contain
+              width: 38px
+              height: 113px
+              position: absolute
+              z-index: 3
+
+              &:nth-of-type(1)
+                top: -30px
+                left: 15px
+
+              &:nth-of-type(2)
+                top: -32px
+                left: 70px
+                transform: rotate(20deg)
+
+              &:nth-of-type(3)
+                top: -30px
+                left: 122px
+                transform: rotate(60deg)
+
+              &:nth-of-type(4)
+                top: 6px
+                left: 180px
+                transform: rotate(80deg)
+
+              &:nth-of-type(5)
+                top: 87px
+                left: 127px
+                transform: rotate(90deg) scaleX(-1)
+
+            .brain
+              position: absolute
+              top: -40px
+              right: -40px
+              width: 100px
+              height: 72px
+              opacity: 0
+
+              &.animate
+                animation:
+                  name: bounceIn
+                  duration: .3s
+                  iteration-count: 1
+                  fill-mode: forwards
+
+              &:nth-of-type(6)
+                top: -60px
+                left: 15px
+                animation-delay: .3s
+
+              &:nth-of-type(7)
+                top: -60px
+                left: 100px
+                animation-delay: .6s
+
+              &:nth-of-type(8)
+                top: -27px
+                left: 175px
+                animation-delay: .9s
+
+              &:nth-of-type(9)
+                top: 40px
+                left: 212px
+                animation-delay: 1.2s
+
+              &:nth-of-type(10)
+                top: 113px
+                left: 169px
+                animation-delay: 1.5s
+
+
+        .piggy
+          background:
+            image: url('../images/piggy.png')
+            repeat: no-repeat
+            size: contain
+          width: 234px
+          height: 203px
+          position: relative
+
+      .text
+        padding: 25px
+        text-align: justify
+        border: 2px solid $orange
+        border-radius: 20px
+        width: 100%
+
+        p
+          font:
+            family: Lato
+            size: 18px
+
+section.copyrights
+  background-color: $orange
+  padding: 25px
+  text-align: center
+  box-sizing: border-box
+
+  a
+    display: block
+    text-decoration: none
+    color: $white
+    text-transform: uppercase
+
+    strong
+      font:
+        family: "Royal Delight"
+        size: 28px
+    i
+      font:
+        size: 28px

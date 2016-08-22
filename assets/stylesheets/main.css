@@ -4262,6 +4262,206 @@ section.introduction .container {
         width: 100%;
         height: 100%; }
 
+section.explanation .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  section.explanation .container .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 25px;
+    position: relative; }
+    section.explanation .container .item.reverse .illustration {
+      order: 2; }
+    section.explanation .container .item.reverse .text {
+      order: 1; }
+    section.explanation .container .item .illustration {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      margin: 70px 0; }
+      section.explanation .container .item .illustration h1 {
+        display: inline-block;
+        color: #656565;
+        font-family: "Royal Delight";
+        font-size: 26px;
+        text-transform: uppercase;
+        padding: 20px 20px;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .3s linear;
+        animation-name: changeText;
+        animation-duration: 12s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; }
+        section.explanation .container .item .illustration h1:nth-of-type(1) {
+          animation-delay: 0s; }
+        section.explanation .container .item .illustration h1:nth-of-type(2) {
+          animation-delay: 4s; }
+        section.explanation .container .item .illustration h1:nth-of-type(3) {
+          animation-delay: 8s; }
+      section.explanation .container .item .illustration .brain {
+        background-image: url("../images/brain.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 222px;
+        height: 194px;
+        position: relative; }
+        section.explanation .container .item .illustration .brain .particles {
+          background-image: url("../images/particles.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 128px;
+          height: 105px;
+          position: absolute;
+          top: 30px;
+          left: 40px; }
+        section.explanation .container .item .illustration .brain.brain-1 .arrow {
+          background-image: url("../images/arrow.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 100px;
+          height: 50px;
+          position: absolute; }
+          section.explanation .container .item .illustration .brain.brain-1 .arrow:nth-of-type(1) {
+            bottom: 20px;
+            left: -20px;
+            transform: rotate(180deg); }
+          section.explanation .container .item .illustration .brain.brain-1 .arrow:nth-of-type(2) {
+            top: 0;
+            left: 10px;
+            transform: rotate(270deg); }
+          section.explanation .container .item .illustration .brain.brain-1 .arrow:nth-of-type(3) {
+            top: 0;
+            right: -20px; }
+        section.explanation .container .item .illustration .brain.brain-2 .arrow {
+          background-image: url("../images/dubbleArrow.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 100px;
+          height: 88px;
+          position: absolute; }
+          section.explanation .container .item .illustration .brain.brain-2 .arrow:nth-of-type(1) {
+            top: -50px;
+            left: 60px; }
+        section.explanation .container .item .illustration .brain.brain-2 .brain {
+          position: absolute;
+          top: -40px;
+          right: -40px;
+          width: 100px;
+          height: 72px;
+          opacity: 0; }
+          section.explanation .container .item .illustration .brain.brain-2 .brain.animate {
+            animation-name: bounceIn;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          section.explanation .container .item .illustration .brain.brain-2 .brain:nth-of-type(1) {
+            animation-delay: .3s; }
+        section.explanation .container .item .illustration .brain.brain-3 .particles {
+          background-image: url("../images/particlesConected.png"); }
+        section.explanation .container .item .illustration .brain.brain-3 .arrow {
+          background-image: url("../images/arrowThin.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 38px;
+          height: 113px;
+          position: absolute;
+          z-index: 3; }
+          section.explanation .container .item .illustration .brain.brain-3 .arrow:nth-of-type(1) {
+            top: -30px;
+            left: 15px; }
+          section.explanation .container .item .illustration .brain.brain-3 .arrow:nth-of-type(2) {
+            top: -32px;
+            left: 70px;
+            transform: rotate(20deg); }
+          section.explanation .container .item .illustration .brain.brain-3 .arrow:nth-of-type(3) {
+            top: -30px;
+            left: 122px;
+            transform: rotate(60deg); }
+          section.explanation .container .item .illustration .brain.brain-3 .arrow:nth-of-type(4) {
+            top: 6px;
+            left: 180px;
+            transform: rotate(80deg); }
+          section.explanation .container .item .illustration .brain.brain-3 .arrow:nth-of-type(5) {
+            top: 87px;
+            left: 127px;
+            transform: rotate(90deg) scaleX(-1); }
+        section.explanation .container .item .illustration .brain.brain-3 .brain {
+          position: absolute;
+          top: -40px;
+          right: -40px;
+          width: 100px;
+          height: 72px;
+          opacity: 0; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain.animate {
+            animation-name: bounceIn;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain:nth-of-type(6) {
+            top: -60px;
+            left: 15px;
+            animation-delay: .3s; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain:nth-of-type(7) {
+            top: -60px;
+            left: 100px;
+            animation-delay: .6s; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain:nth-of-type(8) {
+            top: -27px;
+            left: 175px;
+            animation-delay: .9s; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain:nth-of-type(9) {
+            top: 40px;
+            left: 212px;
+            animation-delay: 1.2s; }
+          section.explanation .container .item .illustration .brain.brain-3 .brain:nth-of-type(10) {
+            top: 113px;
+            left: 169px;
+            animation-delay: 1.5s; }
+      section.explanation .container .item .illustration .piggy {
+        background-image: url("../images/piggy.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 234px;
+        height: 203px;
+        position: relative; }
+    section.explanation .container .item .text {
+      padding: 25px;
+      text-align: justify;
+      border: 2px solid #ff9000;
+      border-radius: 20px;
+      width: 100%; }
+      section.explanation .container .item .text p {
+        font-family: Lato;
+        font-size: 18px; }
+
+section.copyrights {
+  background-color: #ff9000;
+  padding: 25px;
+  text-align: center;
+  box-sizing: border-box; }
+  section.copyrights a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase; }
+    section.copyrights a strong {
+      font-family: "Royal Delight";
+      font-size: 28px; }
+    section.copyrights a i {
+      font-size: 28px; }
+
 @media (max-width: 1200px) {
   header {
     height: auto !important;
@@ -4331,5 +4531,9 @@ section.introduction .container {
       border-top: solid 1px #ff9000; }
   section.introduction .container {
     flex-direction: column; }
+  section.explanation .container .item {
+    flex-direction: column; }
+    section.explanation .container .item.reverse .illustration, section.explanation .container .item.reverse .text {
+      order: initial; }
   footer .container {
     flex-direction: column; } }
