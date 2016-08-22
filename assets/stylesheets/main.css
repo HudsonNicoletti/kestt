@@ -2389,6 +2389,18 @@
   font-style: normal;
   src: url("../fonts/Royal_Delight_Shad.eot?") format("eot"), url("../fonts/Royal_Delight_Shad.woff") format("woff"), url("../fonts/Royal_Delight_Shad.ttf") format("truetype"), url("../fonts/Royal_Delight_Shad.svg#RoyalDelightShad") format("svg"); }
 
+@font-face {
+  font-family: "Orange Juice";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/orange_juice.eot?") format("eot"), url("../fonts/orange_juice.woff") format("woff"), url("../fonts/orange_juice.ttf") format("truetype"), url("../fonts/orange_juice.svg#OrangeJuice") format("svg"); }
+
+@font-face {
+  font-family: "Satisfy";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Satisfy-Regular.ttf") format("truetype"); }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -4184,6 +4196,46 @@ section.contact {
             color: #656565;
             text-transform: uppercase; }
 
+section.about-us {
+  background-color: #ffcc00;
+  position: relative;
+  margin-top: 60px; }
+  section.about-us:before {
+    width: 100vw;
+    height: 20px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    border-top: 100px solid #ffffff;
+    background-color: #ffffff;
+    z-index: 3;
+    border-radius: 100% 100% 0 0;
+    transform: rotate(180deg); }
+  section.about-us h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -66px;
+    text-align: center;
+    z-index: 4;
+    font-family: Lato;
+    font-size: 50px;
+    color: #656565;
+    text-transform: uppercase; }
+    section.about-us h1 span {
+      font-family: "Orange Juice";
+      font-size: 70px;
+      text-transform: uppercase; }
+  section.about-us .container .intro {
+    padding: 25px; }
+    section.about-us .container .intro p {
+      font-family: "Satisfy";
+      font-size: 30px;
+      text-align: justify;
+      color: #656565; }
+
 @media (max-width: 1200px) {
   header {
     height: auto !important;
@@ -4242,6 +4294,11 @@ section.contact {
   section.login .container {
     flex-direction: column; }
     section.login .container .column + .column {
+      border-left: none;
+      border-top: solid 1px #ff9000; }
+  section.contact .container {
+    flex-direction: column; }
+    section.contact .container .column + .column {
       border-left: none;
       border-top: solid 1px #ff9000; }
   footer .container {

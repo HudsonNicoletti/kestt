@@ -1,0 +1,47 @@
+section.about-us
+  background-color: $yellow
+  position: relative
+  margin-top: 60px
+  
+  &:before
+    width: 100vw
+    height: 20px
+    content: ''
+    display: block
+    position: absolute
+    top: -50px
+    right: 0
+    border-top: 100px solid $white
+    background-color: $white
+    z-index: 3
+    border-radius: 100% 100% 0 0
+    transform: rotate(180deg)
+
+  h1
+    position: absolute
+    left: 0
+    right: 0
+    top: -66px
+    text-align: center
+    z-index: 4
+    font:
+      family: Lato
+      size: 50px
+    color: $grey
+    text-transform: uppercase
+
+    span
+      font:
+        family: "Orange Juice"
+        size: 70px
+      text-transform: uppercase
+
+  .container
+    .intro
+      padding: 25px
+      p
+        font:
+          family: "Satisfy"
+          size: 30px
+        text-align: justify
+        color: $grey
