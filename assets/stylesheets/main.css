@@ -4589,6 +4589,41 @@ section.articles {
             background-color: #ff9000;
             animation: bounceIn .3s ease-in-out; }
 
+section.carousel .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+  section.carousel .container .spacer {
+    width: 50%; }
+  section.carousel .container #carousel {
+    height: 280px;
+    width: 50%;
+    position: relative; }
+    section.carousel .container #carousel .shadow {
+      box-shadow: 0px 16px 26px #888888; }
+    section.carousel .container #carousel .slide {
+      position: absolute;
+      overflow: hidden; }
+      section.carousel .container #carousel .slide img {
+        width: 100%;
+        height: 100%; }
+      section.carousel .container #carousel .slide .carousel-caption {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      section.carousel .container #carousel .slide.active {
+        overflow: visible; }
+        section.carousel .container #carousel .slide.active .carousel-caption {
+          display: block;
+          right: -600px;
+          left: auto; }
+          section.carousel .container #carousel .slide.active .carousel-caption p {
+            font-family: Lato;
+            font-size: 18px;
+            color: #656565; }
+
 @media (max-width: 1200px) {
   header {
     height: auto !important;
@@ -4606,6 +4641,20 @@ section.articles {
     flex-direction: column !important; }
   section.introduction .container .column:nth-child(1) .arrow:nth-of-type(2) {
     display: none; } }
+
+@media (max-width: 1040px) {
+  section.carousel .container {
+    flex-direction: column; }
+    section.carousel .container .spacer {
+      width: 100%;
+      height: 300px; }
+    section.carousel .container #carousel {
+      width: 100%; }
+      section.carousel .container #carousel .slide.active .carousel-caption {
+        display: block;
+        right: auto;
+        left: auto;
+        top: 300px; } }
 
 @media (max-width: 690px) {
   header nav a.trigger {

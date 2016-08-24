@@ -31,6 +31,24 @@
               &:nth-of-type(2)
                 display: none
 
+@media (max-width: 1040px)
+  section.carousel
+    .container
+      flex-direction: column
+      .spacer
+        width: 100%
+        height: 300px
+      #carousel
+        width: 100%
+
+        .slide
+          &.active
+            .carousel-caption
+              display: block
+              right: auto
+              left: auto
+              top: 300px
+
 @media (max-width: 690px)
   header
     nav

@@ -118,8 +118,10 @@
 
 				var el = $(img).closest('.slide'),
 					fn = function() {
+						el.removeClass("active");
 						if (i === mid-1) {
 							// show caption gently
+							el.addClass("active");
 							el.find('span').show().animate({opacity: 0.7});
 						}
 					};
