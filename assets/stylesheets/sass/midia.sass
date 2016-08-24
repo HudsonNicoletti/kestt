@@ -1,0 +1,129 @@
+section.articles
+  background-color: $yellow
+  position: relative
+  margin-top: 60px
+
+  &:before
+    width: 100vw
+    height: 20px
+    content: ''
+    display: block
+    position: absolute
+    top: -50px
+    right: 0
+    border-top: 100px solid $yellow
+    border-radius: 100% 5% 0 0
+    background-color: $yellow
+    z-index: 3
+    transform: rotate(-2deg)
+
+  h1
+    position: absolute
+    z-index: 3
+    top: -60px
+    right: 60px
+    text-align: right
+    font:
+      family: "Royal Delight"
+      size: 50px
+    text-transform: uppercase
+    color: $grey
+
+  .container
+    margin-top: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    flex-wrap: wrap
+
+    article
+      width: 50%
+      display: flex
+      align-items: flex-start
+      justify-content: center
+      flex-direction: row
+      margin: 20px 0
+      box-sizing: border-box
+
+      figure
+        background:
+          color: $white
+        position: relative
+        max-width: 330px
+        width: 100%
+        height: 280px
+        border-radius: 50px
+        border:
+          right: 10px solid $orange
+          bottom: 10px solid $orange
+        overflow: hidden
+        img
+          position: absolute
+          width: 100%
+          height: 100%
+
+
+      .text
+        width: 100%
+        padding: 15px
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        flex-direction: column
+
+        p
+          font:
+            family: Lato
+            size: 18px
+          color: $grey
+          text-align: justify
+
+        a
+          background:
+            color: $orange
+          font:
+            family: Lato
+            size: 18px
+          color: $white
+          text-align: center
+          text-decoration: none
+          border-radius: 100%
+          padding: 45px 25px
+
+    .pages
+      width: 100%
+
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+
+        li
+          margin: 0 6px
+          a
+            color: $grey
+            font:
+              family: "Royal Delight"
+              size: 22px
+            background-color: $white
+            text-transform: uppercase
+            text-decoration: none
+            padding: 15px 23px
+            display: block
+            text-align: center
+            transition: all .3s ease-in-out
+            border-radius: 50%
+            &:hover
+              text-decoration: none
+
+          &.active, &:hover
+            a
+              color: $white
+              background:
+                color: $orange
+              animation: bounceIn .3s ease-in-out
