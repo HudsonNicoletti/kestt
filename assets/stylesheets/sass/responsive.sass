@@ -84,13 +84,22 @@
             a
               padding: 20px
 
-            &.mobile
-              display: inline-block
-
             &.active, &:hover
               a
                 border-radius: 0
                 width: 100%
+
+            &.login
+              a
+                background:
+                  image: none
+              &.active, &:hover
+                a
+                  color: $white
+                  background:
+                    image: none
+                    color: $green
+
 
   section
 

@@ -102,18 +102,6 @@ header
       li
         transition: all .3s ease-in-out
 
-        &.mobile
-          display: none
-
-        &.login
-          a
-            color: $grey
-            font:
-              family: "Royal Delight"
-              size: 18px
-            text-transform: uppercase
-            text-decoration: none
-
         a
           color: $grey
           font:
@@ -127,6 +115,8 @@ header
           text-align: center
           transition: all .3s ease-in-out
           border-radius: 50%
+          background:
+            color: $white
           &:hover
             text-decoration: none
 
@@ -136,6 +126,26 @@ header
             background:
               color: $orange
             animation: bounceIn .3s ease-in-out
+
+        &.login
+          a
+            background:
+              image: url("../images/handborder.png")
+              repeat: no-repeat
+              size: contain
+              position: center
+            color: $grey
+            font:
+              family: "Royal Delight"
+              size: 18px
+
+          &.active, &:hover
+            a
+              color: $white
+              background:
+                image: url("../images/handborder-hover.png")
+                color: transparent
+
 
 section
   width: 100%

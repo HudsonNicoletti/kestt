@@ -3503,14 +3503,6 @@ header {
       position: relative; }
       header nav ul li {
         transition: all .3s ease-in-out; }
-        header nav ul li.mobile {
-          display: none; }
-        header nav ul li.login a {
-          color: #656565;
-          font-family: "Royal Delight";
-          font-size: 18px;
-          text-transform: uppercase;
-          text-decoration: none; }
         header nav ul li a {
           color: #656565;
           font-family: Lato;
@@ -3522,13 +3514,26 @@ header {
           display: block;
           text-align: center;
           transition: all .3s ease-in-out;
-          border-radius: 50%; }
+          border-radius: 50%;
+          background-color: #ffffff; }
           header nav ul li a:hover {
             text-decoration: none; }
         header nav ul li.active a, header nav ul li:hover a {
           color: #ffffff;
           background-color: #ff9000;
           animation: bounceIn .3s ease-in-out; }
+        header nav ul li.login a {
+          background-image: url("../images/handborder.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          color: #656565;
+          font-family: "Royal Delight";
+          font-size: 18px; }
+        header nav ul li.login.active a, header nav ul li.login:hover a {
+          color: #ffffff;
+          background-image: url("../images/handborder-hover.png");
+          background-color: transparent; }
 
 section {
   width: 100%;
@@ -4689,11 +4694,15 @@ section.carousel .container {
         text-align: center; }
         header nav ul.active li a {
           padding: 20px; }
-        header nav ul.active li.mobile {
-          display: inline-block; }
         header nav ul.active li.active a, header nav ul.active li:hover a {
           border-radius: 0;
           width: 100%; }
+        header nav ul.active li.login a {
+          background-image: none; }
+        header nav ul.active li.login.active a, header nav ul.active li.login:hover a {
+          color: #ffffff;
+          background-image: none;
+          background-color: #44c200; }
   section.about .container .items .item {
     width: 100% !important; }
   section.stats .container {
