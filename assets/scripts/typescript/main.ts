@@ -45,7 +45,6 @@
         squeeze: 124,
         animate: 250
       });
-
       $("#carousel .slide a").on("click",function(){
         $(".navigate-left").trigger("click");
         return false;
