@@ -4303,7 +4303,7 @@ section.explanation .container {
       justify-content: center;
       flex-direction: column;
       position: relative;
-      margin: 70px 0; }
+      margin: 70px 10px; }
       section.explanation .container .item .illustration h1 {
         display: inline-block;
         color: #656565;
