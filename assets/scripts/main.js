@@ -12,6 +12,9 @@
             $("nav ul").toggleClass("active");
         });
         $("section.info ul.about li").on("click", function () {
+            var title = $(this).find("a").html(), text = $(this).find("span.text").text(), view = $(".view"), vtitle = view.find(".title > h1"), vtext = view.find(".text > p");
+            vtitle.html(title);
+            vtext.text(text);
             $(this).siblings(".active").removeClass("active");
             $(this).addClass("active");
             return false;

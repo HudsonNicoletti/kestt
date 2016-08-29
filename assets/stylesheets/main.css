@@ -4205,6 +4205,14 @@ section.about-us {
     font-size: 50px;
     color: #656565;
     text-transform: uppercase; }
+    section.about-us h1.responsive {
+      font-size: calc(40px + 10 * ((100vw - 420px) / 860)); }
+    @media screen and (min-width: 1280px){
+  section.about-us h1.responsive{
+    font-size: 50px; } }
+    @media screen and (max-width: 420px){
+  section.about-us h1.responsive{
+    font-size: 40px; } }
     section.about-us h1 span {
       font-family: "Orange Juice";
       font-size: 70px;
@@ -4488,6 +4496,17 @@ section.copyrights {
       font-size: 28px; }
     section.copyrights a i {
       font-size: 28px; }
+
+section.law .container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 22px; }
+
+section.law .container p {
+  text-align: justify;
+  font-family: Lato;
+  font-size: 18px; }
 
 section.articles {
   background-color: #ffcc00;
