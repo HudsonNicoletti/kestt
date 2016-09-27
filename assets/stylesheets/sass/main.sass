@@ -444,6 +444,16 @@ section
             image: url('../images/orangePencil.png')
             repeat: no-repeat
             size: contain
+
+          @media(max-width: 640px)
+            background:
+              image: none
+              color: $orange
+            justify-content: center
+            border-radius: 25px
+            h1
+              margin-left: 0 !important
+
           h1
             position: relative
             color: $white
@@ -560,21 +570,25 @@ section
         flex-direction: row
         position: relative
 
+        @media(max-width: 640px)
+          flex-direction: column
+
         h1
           color: $grey
           font:
             family: "Royal Delight"
-            size: 28px
+            size: 24px
           text-transform: uppercase
-          width: 50%
-          word-break:
+          width: 100%
+          word-wrap: break-word
+
         span
           color: $grey
           font:
             family: "Royal Delight"
             size: 40px
           text-transform: uppercase
-          width: 50%
+          width: 100%
 
         i.icon
           width: 130px
@@ -612,7 +626,7 @@ footer
     .logo
       height: auto
       min-height: 136px
-      width: 500px
+      width: 100%
       background:
         image: url('../images/logo.png')
         repeat: no-repeat

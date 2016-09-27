@@ -3773,6 +3773,14 @@ section {
         background-image: url("../images/orangePencil.png");
         background-repeat: no-repeat;
         background-size: contain; }
+        @media (max-width: 640px) {
+          section.info .container .view .title {
+            background-image: none;
+            background-color: #ff9000;
+            justify-content: center;
+            border-radius: 25px; }
+            section.info .container .view .title h1 {
+              margin-left: 0 !important; } }
         section.info .container .view .title h1 {
           position: relative;
           color: #ffffff;
@@ -3876,18 +3884,22 @@ section {
         justify-content: center;
         flex-direction: row;
         position: relative; }
+        @media (max-width: 640px) {
+          section.stats .container .column {
+            flex-direction: column; } }
         section.stats .container .column h1 {
           color: #656565;
           font-family: "Royal Delight";
-          font-size: 28px;
+          font-size: 24px;
           text-transform: uppercase;
-          width: 50%; }
+          width: 100%;
+          word-wrap: break-word; }
         section.stats .container .column span {
           color: #656565;
           font-family: "Royal Delight";
           font-size: 40px;
           text-transform: uppercase;
-          width: 50%; }
+          width: 100%; }
         section.stats .container .column i.icon {
           width: 130px;
           height: 130px;
@@ -3914,7 +3926,7 @@ footer {
     footer .container .logo {
       height: auto;
       min-height: 136px;
-      width: 500px;
+      width: 100%;
       background-image: url("../images/logo.png");
       background-repeat: no-repeat;
       background-size: contain;
