@@ -1,0 +1,19 @@
+{
+  "name": "kestt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typescript": "tsc assets/scripts/typescript/main.ts --outDir assets/scripts/",
+    "sass": "node-sass --include-path sass assets/stylesheets/sass/main.sass assets/stylesheets/main.css && rucksack assets/stylesheets/main.css assets/stylesheets/main.css",
+    "start": "npm run sass && npm run typescript"
+  },
+  "author": "Hudson Nicoletti",
+  "license": "ISC",
+  "dependencies": {
+    "forever-monitor": "^1.7.0",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0"
+  }
+}

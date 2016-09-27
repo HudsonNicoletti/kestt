@@ -1,0 +1,11 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "removeComments": true,
+    "target": "ES5",
+    "outDir": "assets/scripts/",
+    "rootDir": "assets/scripts/typescript/"
+  }
+}
